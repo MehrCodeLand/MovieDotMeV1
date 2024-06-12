@@ -52,5 +52,11 @@ namespace MovieDotMeV1.Forms
             var signUp = new SignUpFm();
             signUp.ShowDialog();
         }
+
+        private void AdminBtn_Click(object sender, EventArgs e)
+        {
+            var admin = new AdminFm();
+            admin.ShowDialog();
+        }
     }
 }

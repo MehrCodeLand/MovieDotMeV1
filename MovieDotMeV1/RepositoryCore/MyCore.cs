@@ -75,5 +75,34 @@ namespace MovieDotMeV1.RepositoryCore
 
             return true;
         }
+
+        public static void RemoveMovie(string title)
+        {
+            var movie = db.Movies.SingleOrDefault(x => x.Title == title);
+            db.Movies.Remove(movie);
+            db.SaveChanges();
+        }
+        public static void CreateMovie(Movie movie)
+        {
+            db.Movies.Add(movie);
+            db.SaveChanges();
+        }
+        public static bool LoginAdmin(string username , string pass)
+        {
+            var admin = db.Admins.SingleOrDefault(x => x.Username == username && x.Password == pass);
+            if (admin != null)
+                return true;
+
+            return false;
+        }
+        public static void RemoveMovieAll(string title)
+        {
+            var movies = db.Movies.ToList();
+
+            var myMovie = db.Movies.SingleOrDefault(y => y.Title == title);
+
+            db.Movies.Remove(myMovie);
+            db.SaveChanges();
+        }
     }
 }

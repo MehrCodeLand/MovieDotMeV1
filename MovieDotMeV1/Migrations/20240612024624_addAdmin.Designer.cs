@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieDotMeV1.Db;
 
@@ -11,9 +12,11 @@ using MovieDotMeV1.Db;
 namespace MovieDotMeV1.Migrations
 {
     [DbContext(typeof(MyDb))]
-    partial class MyDbModelSnapshot : ModelSnapshot
+    [Migration("20240612024624_addAdmin")]
+    partial class addAdmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

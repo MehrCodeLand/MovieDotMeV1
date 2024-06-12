@@ -35,6 +35,7 @@
             SignUpBtn = new Button();
             label1 = new Label();
             label2 = new Label();
+            AdminBtn = new Button();
             SuspendLayout();
             // 
             // UsernameBox
@@ -99,11 +100,22 @@
             label2.TabIndex = 6;
             label2.Text = "password";
             // 
+            // AdminBtn
+            // 
+            AdminBtn.Location = new Point(648, 359);
+            AdminBtn.Name = "AdminBtn";
+            AdminBtn.Size = new Size(75, 23);
+            AdminBtn.TabIndex = 7;
+            AdminBtn.Text = "Admin";
+            AdminBtn.UseVisualStyleBackColor = true;
+            AdminBtn.Click += AdminBtn_Click;
+            // 
             // WelcomeFm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(AdminBtn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(SignUpBtn);
@@ -126,5 +138,6 @@
         private Button SignUpBtn;
         private Label label1;
         private Label label2;
+        private Button AdminBtn;
     }
 }
