@@ -33,6 +33,8 @@
             SignInBtn = new Button();
             ExitBtn = new Button();
             SignUpBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // UsernameBox
@@ -79,11 +81,31 @@
             SignUpBtn.UseVisualStyleBackColor = true;
             SignUpBtn.Click += SignUpBtn_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(223, 106);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 5;
+            label1.Text = "username";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(223, 151);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 6;
+            label2.Text = "password";
+            // 
             // WelcomeFm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(SignUpBtn);
             Controls.Add(ExitBtn);
             Controls.Add(SignInBtn);
@@ -102,5 +124,7 @@
         private Button SignInBtn;
         private Button ExitBtn;
         private Button SignUpBtn;
+        private Label label1;
+        private Label label2;
     }
 }

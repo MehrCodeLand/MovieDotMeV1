@@ -1,11 +1,5 @@
 ﻿using MovieDotMeV1.Db;
 using MovieDotMeV1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace MovieDotMeV1.RepositoryCore
 {
     public static class MyCore
@@ -46,7 +40,6 @@ namespace MovieDotMeV1.RepositoryCore
 
             return true;
         }
-
         public static User GetUser(string username)
         {
             return db.Users.SingleOrDefault(u => u.Username == username);
@@ -57,7 +50,6 @@ namespace MovieDotMeV1.RepositoryCore
 
             return user.Movies.ToList();
         }
-
         public static bool AddFaveMovies(string username  , string movieTitle)
         {
             var user = db.Users.SingleOrDefault(u => u.Username == username);
@@ -71,7 +63,6 @@ namespace MovieDotMeV1.RepositoryCore
 
             return true;
         }
-
         public static bool RemoveFaveMovies(string username , string movieTile)
         {
             var user = db.Users.SingleOrDefault(x =>x.Username == username);

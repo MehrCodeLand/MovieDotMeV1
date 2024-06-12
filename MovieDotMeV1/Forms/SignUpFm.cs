@@ -35,10 +35,10 @@ namespace MovieDotMeV1.Forms
             var password = PasswordBox.Text;
             var repassword = RePasswordBox.Text;
 
-            if(password == repassword)
+            if (password == repassword)
             {
                 var IsUp = MyCore.SignUp(username, password);
-                if(IsUp)
+                if (IsUp)
                 {
                     this.Close();
                 }

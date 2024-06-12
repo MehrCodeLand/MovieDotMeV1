@@ -33,6 +33,9 @@
             RePasswordBox = new TextBox();
             SignUpBtn = new Button();
             BackBtn = new Button();
+            label2 = new Label();
+            label1 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // PasswordBox
@@ -76,11 +79,41 @@
             BackBtn.UseVisualStyleBackColor = true;
             BackBtn.Click += BackBtn_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(201, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 9;
+            label2.Text = "password";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(201, 111);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 8;
+            label1.Text = "username";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(201, 194);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 10;
+            label3.Text = "password";
+            // 
             // SignUpFm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(BackBtn);
             Controls.Add(SignUpBtn);
             Controls.Add(RePasswordBox);
@@ -99,5 +132,8 @@
         private TextBox RePasswordBox;
         private Button SignUpBtn;
         private Button BackBtn;
+        private Label label2;
+        private Label label1;
+        private Label label3;
     }
 }
