@@ -12,7 +12,7 @@ namespace MovieDotMeV1.Db
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Admin> Admins { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseSqlServer("server = . ; DataBase = MovieDotMeV1 ; Integrated Security = true ;Trusted_Connection=true;Encrypt=false;Integrated Security=True;TrustServerCertificate=True ;");
